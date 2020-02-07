@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Les_13_2</title>
+  
+  <style> 
+    .external-red { 
+    background-color: red ;
+    } 
+    </style> 
+
+</head>
+<body>
+ 
+<a name="list">список</a> 
+<ul> 
+<li id="red1"><a href="http://google.com">http://google.com</a></li> 
+<li><a href="/tutorial">/tutorial.html</a></li> 
+<li><a href="local/path">local/path</a></li> 
+<li id="red2"><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li> 
+<li id="red3"><a href="http://nodejs.org">http://nodejs.org</a></li> 
+<li id="red4"><a href="http://internal.com/test">http://internal.com/test</a></li> 
+</ul> 
+ 
+  <button onclick="backgroundColor();">red</button>
+  
+</body>
+</html>
+<script>
+  function backgroundColor(newColor) {
+ 
+      for (let i of document.getElementsByTagName('li') ){
+          if(i.id.includes('red')){
+              i.className = 'external-red';
+              console.log(i.className);
+              
+          }
+     }
+  }
+</script>
+ 
